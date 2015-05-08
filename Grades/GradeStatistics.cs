@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Grades
 {
-    class GradeStatistics
+    public class GradeStatistics
     {
         public float AverageGrade;
         public float HighestGrade;
