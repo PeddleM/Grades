@@ -26,7 +26,7 @@ namespace Grades.Tests
         [TestMethod]
         public void CheckHighestGrade()
         {
-            Assert.AreEqual(90f, stats.HighestGrade);
+            Assert.AreEqual(80f, stats.HighestGrade);
         }
 
         [TestMethod]
@@ -38,14 +38,14 @@ namespace Grades.Tests
 
         private void SetUpGrades()
         {
-            book.AddGrade(90f);
+            book.AddGrade(80f);
             book.AddGrade(72.5f);
             book.AddGrade(65f);
         }
         
         public static float CalculateAverage()
         {
-            return (90f + 72.5f + 65f) / 3;
+            return (80f + 72.5f + 65f) / 3;
         }
     }
 }

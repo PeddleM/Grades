@@ -4,3 +4,9 @@ c:\users\michael\documents\visual studio 2013\Projects\Grades\Grades\obj\Debug\G
 c:\users\michael\documents\visual studio 2013\Projects\Grades\Grades\obj\Debug\Grades.exe
 c:\users\michael\documents\visual studio 2013\Projects\Grades\Grades\obj\Debug\Grades.pdb
 C:\Users\Michael\Documents\Visual Studio 2013\Projects\Grades\Grades\bin\Debug\Grades.exe.config
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\bin\Debug\Grades.exe.config
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\obj\Debug\Grades.exe
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\obj\Debug\Grades.pdb
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\bin\Debug\Grades.exe
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\bin\Debug\Grades.pdb
+C:\Users\MPeddle\Documents\Visual Studio 2013\Projects\Grades\Grades\obj\Debug\Grades.csprojResolveAssemblyReference.cache
