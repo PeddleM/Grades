@@ -41,3 +41,27 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/Grades
+/Grades/bin/Debug
+/Grades/bin/Debug/Grades.exe.config
+/Grades/bin/Debug/Grades.vshost.exe.config
+/Grades/obj/Debug
+/Grades/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+/Grades/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+/Grades/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+/Grades.Tests
+/Grades.Tests/bin/Debug
+/Grades.Tests/bin/Debug/Grades.exe
+/Grades.Tests/bin/Debug/Grades.pdb
+/Grades.Tests/bin/Debug/Grades.Tests.dll
+/Grades.Tests/bin/Debug/Grades.Tests.pdb
+/Grades.Tests/obj/Debug
+/Grades.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Grades.Tests/obj/Debug/Grades.Tests.csproj.FileListAbsolute.txt
+/Grades.Tests/obj/Debug/Grades.Tests.csprojResolveAssemblyReference.cache
+/Grades.Tests/obj/Debug/Grades.Tests.dll
+/Grades.Tests/obj/Debug/Grades.Tests.pdb
+/Grades.Tests/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+/Grades.Tests/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+/Grades.Tests/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+/Grades.Tests/Grades.Tests.csproj.user
