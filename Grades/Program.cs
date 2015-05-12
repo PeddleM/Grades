@@ -8,18 +8,21 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook();
+            GradeBook book = new GradeBook("My book");
             book.AddGrade(91f);
             book.AddGrade(89.1f);
             book.AddGrade(75f);
 
             GradeStatistics stats = book.ComputeStatistics();
 
-            WriteNames("Scott", "Michael", "Steven");
+            book.NameChanged += OnNameChanged;
+            book.NameChanged += OnNameChanged2;
+            book.NameChanged = new NameChangedDelegate(OnNameChanged2);
 
-            int number = 20;
-            WriteBytes(number);
-            WriteBytes(stats.AverageGrade);
+            book.Name = "new book";
+            WriteNames(book.Name);
+
+            
 
             Console.WriteLine(stats.AverageGrade);
             Console.WriteLine(stats.LowestGrade);
@@ -27,6 +30,16 @@ namespace Grades
 
             Console.ReadLine();
 
+        }
+
+        private static void OnNameChanged2(string oldValue, string newValue)
+        {
+            Console.WriteLine("***");
+        }
+
+        private static void OnNameChanged(string oldValue, string newValue)
+        {
+            Console.WriteLine("Name changed from {0} to {1}", oldValue, newValue);
         }
 
         private static void WriteBytes(float value)

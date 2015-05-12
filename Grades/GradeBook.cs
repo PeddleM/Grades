@@ -7,10 +7,13 @@ namespace Grades
     { 
 
         List<float> grades;
-        public string Name;
-        public GradeBook()
+        private string _name;
+        public NameChangedDelegate NameChanged;
+
+        public GradeBook(string name = "There is no name")
         {
             grades = new List<float>();
+            _name = name;
         }
 
         public void AddGrade(float grade)
@@ -36,6 +39,27 @@ namespace Grades
             stats.AverageGrade = sum / grades.Count;
 
             return stats;
+        }
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (_name != value)
+                {
+                    var oldValue = _name;
+                    _name = value;
+                    if (NameChanged != null)
+                    {
+                        NameChanged(oldValue, value);
+                    }
+                }
+                
+            }
         }
     }
 }
