@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Grades
 {
     public class GradeBook
     { 
 
-        List<float> grades;
+        List<float> _grades;
         private string _name;
         public event NameChangedDelegate NameChanged;
 
         public GradeBook(string name = "There is no name")
         {
-            grades = new List<float>();
+            _grades = new List<float>();
             _name = name;
         }
 
@@ -20,7 +21,7 @@ namespace Grades
         {
             if (grade >= 0 && grade <= 100)
             {
-                grades.Add(grade);
+                _grades.Add(grade);
             }
         }
 
@@ -29,14 +30,14 @@ namespace Grades
             GradeStatistics stats = new GradeStatistics();
             float sum = 0f;
 
-            foreach (float grade in grades)
+            foreach (float grade in _grades)
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
                 sum += grade;
             }
 
-            stats.AverageGrade = sum / grades.Count;
+            stats.AverageGrade = sum / _grades.Count;
 
             return stats;
         }
@@ -63,6 +64,18 @@ namespace Grades
                 }
                 
             }
+        }
+
+        public void WriteGrades(TextWriter textWriter)
+        {
+            textWriter.WriteLine("Grades:");
+            int i = 0;
+            do
+            {
+                textWriter.WriteLine(_grades[i]);
+                i++;
+            } while (i < _grades.Count);
+            textWriter.WriteLine("*********");
         }
     }
 }

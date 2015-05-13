@@ -8,26 +8,18 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook("My book");
+            GradeBook book = new GradeBook("Michael's book");
             book.AddGrade(91f);
             book.AddGrade(89.1f);
             book.AddGrade(75f);
+            book.WriteGrades(Console.Out);
 
-            GradeStatistics stats = book.ComputeStatistics();
-
-            book.NameChanged += OnNameChanged;
-            book.NameChanged += OnNameChanged2;
-            book.NameChanged += OnNameChanged;
-            //book.NameChanged = new NameChangedDelegate(OnNameChanged2);
-
-            book.Name = "new book";
-            WriteNames(book.Name);
-
-            
+            GradeStatistics stats = book.ComputeStatistics();     
 
             Console.WriteLine(stats.AverageGrade);
             Console.WriteLine(stats.LowestGrade);
             Console.WriteLine(stats.HighestGrade);
+            Console.WriteLine("{0} - {1}",stats.LetterGrade, stats.Description);
 
             Console.ReadLine();
 
