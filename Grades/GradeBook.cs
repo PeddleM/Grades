@@ -4,20 +4,19 @@ using System.IO;
 
 namespace Grades
 {
-    public class GradeBook
+    public class GradeBook : GradeTracker
     { 
 
-        List<float> _grades;
-        private string _name;
-        public event NameChangedDelegate NameChanged;
-
+        protected List<float> _grades;
+       
         public GradeBook(string name = "There is no name")
         {
+            Console.WriteLine("gradebook ctor");
             _grades = new List<float>();
-            _name = name;
+            Name = name;
         }
 
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
@@ -25,8 +24,9 @@ namespace Grades
             }
         }
 
-        public GradeStatistics ComputeStatistics()
+        public override GradeStatistics ComputeStatistics()
         {
+            Console.WriteLine("regular compute");
             GradeStatistics stats = new GradeStatistics();
             float sum = 0f;
 
@@ -42,31 +42,9 @@ namespace Grades
             return stats;
         }
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                if (_name != value)
-                {
-                    var oldValue = _name;
-                    _name = value;
-                    if (NameChanged != null)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.OldValue = oldValue;
-                        args.NewValue = value;
-                        NameChanged(this, args);
-                    }
-                }
-                
-            }
-        }
+        
 
-        public void WriteGrades(TextWriter textWriter)
+        public override void WriteGrades(TextWriter textWriter)
         {
             textWriter.WriteLine("Grades:");
             int i = 0;
