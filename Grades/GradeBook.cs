@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -59,6 +60,11 @@ namespace Grades
                 i++;
             } while (i < _grades.Count);
             textWriter.WriteLine("*********");
+        }
+
+        public override IEnumerator GetEnumerator()
+        {
+            return _grades.GetEnumerator();
         }
     }
 }
