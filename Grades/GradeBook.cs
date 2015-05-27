@@ -24,6 +24,11 @@ namespace Grades
             }
         }
 
+        public override void DoSomeThing()
+        {
+            
+        }
+
         public override GradeStatistics ComputeStatistics()
         {
             Console.WriteLine("regular compute");

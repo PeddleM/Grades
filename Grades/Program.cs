@@ -9,7 +9,7 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeTracker book = CreateGradeBook();
+            IGradeTracker book = CreateGradeBook();
 
             try
             {
@@ -40,7 +40,8 @@ namespace Grades
                 Console.ReadLine();
                 return;
             }
-            
+
+            book.DoSomeThing();
             book.WriteGrades(Console.Out);
 
             try
@@ -64,9 +65,9 @@ namespace Grades
 
         }
 
-        private static GradeTracker CreateGradeBook()
+        private static IGradeTracker CreateGradeBook()
         {
-            GradeTracker book = new ThrowAwayGradeBook("Michaels book");
+            IGradeTracker book = new ThrowAwayGradeBook("Michaels book");
             return book;
         }
 
